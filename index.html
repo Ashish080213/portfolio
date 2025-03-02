@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ashish Varma's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Penumetsa Sri Sai Ashish Varma</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <!-- <li class="nav-item"><a href="https://roboticsros.blogspot.com/" class="nav-link" target="_blank"><span>Blog</span></a></li> -->
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_11.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Ashish Varma</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Student  ',
+						// 'Robotics Engineer  ',
+						'ROS Enthusiast  ',
+						// 'Blogger   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>Robotics Software Developer</h2> -->
+			            <h2>AI & Robotics Engineer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://roboticsros.blogspot.com/" target="_blank" class="btn btn-primary py-3 px-4">MY BLOG</a> 
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" target="_blank" class="btn btn-primary py-3 px-4">YouTube</a>  -->
+							<a href="https://github.com/Ashish080213" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me1.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Ashish Varma</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Ex-Robotics Engineer</span></p>
+										<p><span class="title-s">Experience: </span> <span>6 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Hyderabad, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>ROS & ROS2</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Python, C++ & MATLAB</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="85" aria-valuemin="0"
+										aria-valuemax="100"></div>
+									</div>
+									
+									<span>AI & ML</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>PLC & HMI</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="85" aria-valuemin="0"
+										aria-valuemax="100"></div>
+									</div>
+
+									<span>Fusion 360</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<!-- <span>Open CV</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Aspiring Robotics Engineer with experience as a Robotics Testing Engineer and internships in robotics. Proficient in ROS, with expertise in developing and testing manipulators and mobile robots. Skilled in integrating electronics with software to build innovative and efficient robotic solutions. Seeking a developer role to contribute to creating advanced and safe robotic systems.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>AI &amp; Robotics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Robotics, ROS, AIML &amp; Computer Vision</span></li>
+									<li class="d-flex"><span>Education:</span> <span>M.Tech</span></li>
+									<!-- <li class="d-flex"><span>Languages:</span> <span>English, Telugu, Hindi &amp; German</span></li> -->
+									<li class="d-flex"><span>Languages:</span> <span>English, Hindi &amp; Telugu</span></li>
+									<!-- <li class="d-flex"><span>Dev Boards:</span> <span>Arduino, Raspberry Pi, STM &amp; ESP32</span></li> -->
+									<li class="d-flex"><span>Dev Boards:</span> <span>Arduino &amp; Raspberry Pi</span></li>
+									<!-- <li class="d-flex"><span>Other Skills:</span> <span>Linux, Git, Blogging &amp; Firebase</span></li> -->
+									<li class="d-flex"><span>Other Skills:</span> <span>Linux, Git  &amp; Blogging</span></li>
+									<li class="d-flex"><span>Interests:</span> <span>DIY Projects</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/sri-sai-ashish-varma-penumetsa-595987201/" target="_blank" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Robotics Engineer with 6 Months of Practical Experience in Self Driving Technology. Proven Expertise in Robotics and ROS.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan 2024 - July 2024</span>
+						<h2>Robotics Testing Engineer</h2>
+						<span class="position">Flux Auto</span>
+						<p class="mt-4">Flux Auto is building autonomous mobility technology to fully automate the movement and operation of vehicles in controlled spaces. Flux is currently deploying in warehouses, farms and mines.
+							<ul>
+								<li>Responsible for conducting thorough testing of various robotic stacks and hardware, as well as maintaining the perception stack, including the 2D LiDAR.</li>
+								<li>Incharge of tuning the transformation frames(TF) of 2D lidars and configuring the SICK 2D Lidar using SICK Safety Designer.
+								</li>
+								<li>Coordinating with different teams in India and Mexico to deploy robots at client location.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Dec 2023</span>
+						<h2>Robotics Project Intern</h2>
+						<span class="position">IITKGP</span>
+						<p class="mt-4">The Centre for Excellence in Robotics (CER) at IIT, Kharagpur, India, is an umbrella body, under the aegis of which, all robotics-related activities of the Institute will be conducted and coordinated. 
+							<ul>
+								<li>Conducted a research project, designed a prototype robot, and successfully tackled the challenges of speed, position, and distance control for a nonholonomic wheeled mobile robot using a differential-drive system.</li>
+								<li> The experimental results validated the robustness of the control system, achieving minimal deviations from target points. </li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-2026</span>
+    					<h2>M.Tech. AI & Robotics</h2>
+    					<span class="position">SASTRA University</span>
+    					<p class="mt-4">Grade: 10 CGPA</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2024</span>
+    					<h2>B.Tech. EEE</h2>
+    					<span class="position">Amrita Vishwa Vidyapeetham</span>
+    					<p class="mt-4">Grade: 9.1 CGPA</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/drive/folders/1STJcWCGcs2wt4QxM_SjMloqcup0iCHMF?usp=sharing" target="_blank" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <!-- <p>ROS Related Projects</p> -->
+			<h5>Below are the sample ROS/ROS2 projects on Navigation, Moveit & ROS Control.</h5>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.youtube.com/watch?v=r790VNmlMO8" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_1a4.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.youtube.com/watch?v=r790VNmlMO8" target="_blank">Autonomous Navigation using ROS2 (TurtleBot-3)</a></h3>
+                <p>Controlled a robot using ROS 2, created a map of the environment, and implemented localization and autonomous navigation behavior using SLAM.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://youtu.be/2-ZblD8mWIE" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2a2.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://youtu.be/2-ZblD8mWIE" target="_blank">Arm Manipulation using UR5 Robot</a></h3>
+                <p>This project focuses on detecting ArUco markers, finding the centers of boxes, and performing pick-and-place operations using ROS 2 MoveIt Servo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Ashish080213/robotics_software_engineer/tree/assignments" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3a.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Ashish080213/robotics_software_engineer/tree/assignments" target="_blank">Robotics Software Engineer Learning Path</a></h3>
+                <p>These projects focus on practical robotics applications using C++ and ROS 2. They begin with core concepts and progress through advanced topics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div> -->
+
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h5>Below are the sample Robotics projects on Kinematics, Path Planning & Sensor Fusion.</h5>
+            <!-- <h5>Below are the sample Robotics projects on Control, Path Planning & SLAM.</h5> -->
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1sgO0S2thSfHuKBhSLdRq5mGZcKrCcNYE/view?usp=sharing" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2b.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1sgO0S2thSfHuKBhSLdRq5mGZcKrCcNYE/view?usp=sharing" target="_blank">Kinematic Analysis of 6-DOF Robotic Arm</a></h3>
+                <p>This project focuses on modeling 6DOF kinematic equations and controlling movement in 3D space using FK & IK.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1FVkdHWjv3Xd1ElxarbCyjPiHPgnVevmw/view?usp=sharing" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_1b.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1FVkdHWjv3Xd1ElxarbCyjPiHPgnVevmw/view?usp=sharing" target="_blank">RoadMap Based Path Planning</a></h3>
+                <p>This project aims to develop a graph-based path-planning system tailored for self-driving technology. It will focus on optimizing travel time in emergencies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://drive.google.com/file/d/1Rs_HQjaY4dhlkOheas0IWDz66TNZvleA/view?usp=sharing" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3b.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1Rs_HQjaY4dhlkOheas0IWDz66TNZvleA/view?usp=sharing" target="_blank">GPS & IMU Fusion using Extended Kalman Filter - [Active]</a></h3>
+                <p>This project enhances robot state estimation by implementing an Extended Kalman Filter to fuse GPS and IMU data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div> -->
+
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h5>Below are the sample AI&ML projects on Object Detection, Image Classification & RL.</h5>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1aa8enAQpyV6D2oJXClgLEQE4wY5bxVZl/view?usp=sharing" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_1d2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1aa8enAQpyV6D2oJXClgLEQE4wY5bxVZl/view?usp=sharing" target="_blank">Object Detection</a></h3>
+                <p>Implemented a real-time object detection application using OpenCV and a pre-trained deep learning model.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Ashish080213/-Identify-Dog-Breeds-using-Pre-trained-Image-Classifier/tree/main" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2d.webp');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Ashish080213/-Identify-Dog-Breeds-using-Pre-trained-Image-Classifier/tree/main" target="_blank">Identify Dog Breeds using NN</a></h3>
+                <p>Using a pre-trained image classifier/neural network, classified images of dogs (by breeds).</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="" class="block-20 zoom-effect" style="background-image: url('images/proj_3d.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="">Path Plannng using RL - [Active]</a></h3>
+                <p>This project focuses on developing multi-robot path planning using Q-learning and Deep Q-learning.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div> -->
+
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h5>Below are the sample Robotics Hardware Projects.</h5>
+            <!-- <h5>Below are the sample Robotics projects on Control, Path Planning & SLAM.</h5> -->
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="images/v1.gif" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_1c.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="images/v1.gif" target="_blank">Self Balancing Bike</a></h3>
+                <p>Developed a self-balancing robot with a simulation model in V-REP using a reaction wheel mechanism.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="images/proj_3c2.jpg" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3c6.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="images/proj_3c2.jpg" target="_blank">Mobile Robot</a></h3>
+			  <p>Assembled a ROS-based mobile robot [TortoiseBot], and implemented autonomous navigation using SLAM.</p>
+			</div>
+		  </div>
+		</div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Ashish080213/TICTACTOE_4DOF_RoboticArm" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2c.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Ashish080213/TICTACTOE_4DOF_RoboticArm" target="_blank">Robotic Arm</a></h3>
+                <p>Designed and built a 4-DOF robotic arm using Arduino, OpenCV, and inverse kinematics to play tic-tac-toe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div> -->
+
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span><b>Courses</b></span>
+				<span>1. ROS & ROS2<br>2. Robotics<br>3. PLC & HMI<br>4. AI & ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span><b>Projects</b></span>
+				<span>1. ROS & ROS2 Navigation<br>2. Kinematics<br>3. Image Classification<br>4. Self Balancing Robot</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span><b>Publications</b></span>
+				<!-- <span> 1. Enhancing Control
+					Strategy in SRM</span> -->
+					<span><a href="https://ieeexplore.ieee.org/document/10696419" target="_blank">
+						1. Enhancing Control Strategy in SRM</a></span>
+				   <span> 2. Optimizing SRM Performance in
+					EVs</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span><b>Certifications</b></span>
+				<span>1. e-Yantra<br>2. ROS/ROS2<br>3. Path Planning<br>4. NPTEL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_11.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4>I love to learn and solve robotics-related challenges integrated with AI</h4>
+						<br>
+						<p><a href="https://github.com/Ashish080213" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Hyderabad, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 7989649881</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">ashishvarma080213@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/drive/folders/1STJcWCGcs2wt4QxM_SjMloqcup0iCHMF?usp=sharing" target="_blank">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScg4h_-5E3FRcrdUzdlVGganiIt0bxqpitib8iH0fHNR_SRfw/viewform?usp=sharing" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sri-sai-ashish-varma-penumetsa-595987201/" target="_blank"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://medium.com/@robotics.rosbotics" target="_blank"><span class="icon-medium"></span></a></li>
+					  <li class="ftco-animate"><a href="https://leetcode.com/u/AshishVarma/" target="_blank"><span class="icon-code"></span></a></li>
+					  <li class="ftco-animate"><a href="https://roboticsros.blogspot.com/" target="_blank"><span class="icon-book"></span></a></li>
+				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/ashish_varma._/" target="_blank"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center"> -->
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			<!-- </div>
+		  </div>
+		</div>
+	  </footer> -->
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
